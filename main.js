@@ -112,3 +112,21 @@
 // console.log(person); // { name: "Denis", age: 50, city: "Volgograd" }
 // // Нельзя переназначить:
 // person = { name: "Stas" }; // Ошибка!
+
+// console.log(typeof "текст"); // "string"
+// console.log(typeof 42); // "number"
+// console.log(typeof true); // "boolean"
+// console.log(typeof undefined); // "undefined"
+// console.log(typeof null); // "object" !!!
+// console.log(typeof {}); // "object"
+// console.log(typeof []); // "object"
+// console.log(typeof function () {}); // "function"
+
+
+// let numberX = null;
+// console.log(numberX === null); // true
+
+let newPrice = 100;
+console.log(newPrice, typeof newPrice);
+newPrice = "1"
+console.log(newPrice, typeof newPrice);
