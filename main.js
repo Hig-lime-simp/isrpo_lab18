@@ -126,7 +126,38 @@
 // let numberX = null;
 // console.log(numberX === null); // true
 
-let newPrice = 100;
-console.log(newPrice, typeof newPrice);
-newPrice = "1"
-console.log(newPrice, typeof newPrice);
+// let newPrice = 100;
+// console.log(newPrice, typeof newPrice);
+// newPrice = "1"
+// console.log(newPrice, typeof newPrice);
+
+// 8.2. Пример Кода
+// Явное преобразование типов:
+
+// В строку
+let num = 42;
+let str = String(num); // "42"
+let str2 = num.toString(); // "42"
+let str3 = "" + num; // "42"
+
+// В число
+let strNum = "123";
+let int = Number(strNum); // 123
+let int2 = parseInt("42.5"); // 42
+let float = parseFloat("3.14"); // 3.14
+let int3 = +"99"; // 99 (унарный плюс)
+
+// В булево значение
+let bool1 = Boolean(1); // true
+let bool2 = !1; // false (логическое НЕ)
+let bool3 = Boolean(0); // false
+let bool4 = Boolean(""); // false
+
+// Неявное преобразование (coercion):
+console.log("5" + 3); // "53" (конкатенация)
+console.log("5" - 3); // 2 (преобразование в число)
+console.log("5" * "2"); // 10
+console.log(true + 1); // 2 (true преобразуется в 1)
+console.log(false + 1); // 1 (false преобразуется в 0)
+console.log(null + 1); // 1 (null преобразуется в 0)
+console.log(undefined + 1); // NaN
