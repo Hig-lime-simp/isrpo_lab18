@@ -162,27 +162,27 @@
 // console.log(null + 1); // 1 (null преобразуется в 0)
 // console.log(undefined + 1); // NaN
 
-// Сравнение с преобразованием типов (нестрогое равенство ==)
-console.log(5 == "5"); // true (нестрогое, с преобразованием)
-console.log(0 == false); // true
-console.log(null == undefined); // true
-console.log(null === undefined); // false (строгое равенство)
+// // Сравнение с преобразованием типов (нестрогое равенство ==)
+// console.log(5 == "5"); // true (нестрогое, с преобразованием)
+// console.log(0 == false); // true
+// console.log(null == undefined); // true
+// console.log(null === undefined); // false (строгое равенство)
 
-// ⚠️ Объекты сравниваются по ссылке, а не по содержимому:
+// // ⚠️ Объекты сравниваются по ссылке, а не по содержимому:
 
-let obj1 = { name: "John" };
-let obj2 = { name: "John" };
+// let obj1 = { name: "John" };
+// let obj2 = { name: "John" };
 
-console.log(obj1 == obj2); // false
-console.log(obj1 === obj2); // false
+// console.log(obj1 == obj2); // false
+// console.log(obj1 === obj2); // false
 
-// Почему? Это разные объекты в памяти!
+// // Почему? Это разные объекты в памяти!
 
-let obj3 = obj1; // obj3 ссылается на тот же объект
-console.log(obj1 === obj3); // true
+// let obj3 = obj1; // obj3 ссылается на тот же объект
+// console.log(obj1 === obj3); // true
 
-// То же с массивами:
+// // То же с массивами:
 
-let arr1 = [1, 2, 3];
-let arr2 = [1, 2, 3];
-console.log(arr1 === arr2); // false (разные массивы)
+// let arr1 = [1, 2, 3];
+// let arr2 = [1, 2, 3];
+// console.log(arr1 === arr2); // false (разные массивы)
