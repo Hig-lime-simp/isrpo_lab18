@@ -186,3 +186,7 @@
 // let arr1 = [1, 2, 3];
 // let arr2 = [1, 2, 3];
 // console.log(arr1 === arr2); // false (разные массивы)
+
+let a2 = 5;
+let b2 = 5;
+console.log(a2 + b2,a2 * b2);
