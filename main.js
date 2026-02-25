@@ -134,30 +134,55 @@
 // 8.2. Пример Кода
 // Явное преобразование типов:
 
-// В строку
-let num = 42;
-let str = String(num); // "42"
-let str2 = num.toString(); // "42"
-let str3 = "" + num; // "42"
+// // В строку
+// let num = 42;
+// let str = String(num); // "42"
+// let str2 = num.toString(); // "42"
+// let str3 = "" + num; // "42"
 
-// В число
-let strNum = "123";
-let int = Number(strNum); // 123
-let int2 = parseInt("42.5"); // 42
-let float = parseFloat("3.14"); // 3.14
-let int3 = +"99"; // 99 (унарный плюс)
+// // В число
+// let strNum = "123";
+// let int = Number(strNum); // 123
+// let int2 = parseInt("42.5"); // 42
+// let float = parseFloat("3.14"); // 3.14
+// let int3 = +"99"; // 99 (унарный плюс)
 
-// В булево значение
-let bool1 = Boolean(1); // true
-let bool2 = !1; // false (логическое НЕ)
-let bool3 = Boolean(0); // false
-let bool4 = Boolean(""); // false
+// // В булево значение
+// let bool1 = Boolean(1); // true
+// let bool2 = !1; // false (логическое НЕ)
+// let bool3 = Boolean(0); // false
+// let bool4 = Boolean(""); // false
 
-// Неявное преобразование (coercion):
-console.log("5" + 3); // "53" (конкатенация)
-console.log("5" - 3); // 2 (преобразование в число)
-console.log("5" * "2"); // 10
-console.log(true + 1); // 2 (true преобразуется в 1)
-console.log(false + 1); // 1 (false преобразуется в 0)
-console.log(null + 1); // 1 (null преобразуется в 0)
-console.log(undefined + 1); // NaN
+// // Неявное преобразование (coercion):
+// console.log("5" + 3); // "53" (конкатенация)
+// console.log("5" - 3); // 2 (преобразование в число)
+// console.log("5" * "2"); // 10
+// console.log(true + 1); // 2 (true преобразуется в 1)
+// console.log(false + 1); // 1 (false преобразуется в 0)
+// console.log(null + 1); // 1 (null преобразуется в 0)
+// console.log(undefined + 1); // NaN
+
+// Сравнение с преобразованием типов (нестрогое равенство ==)
+console.log(5 == "5"); // true (нестрогое, с преобразованием)
+console.log(0 == false); // true
+console.log(null == undefined); // true
+console.log(null === undefined); // false (строгое равенство)
+
+// ⚠️ Объекты сравниваются по ссылке, а не по содержимому:
+
+let obj1 = { name: "John" };
+let obj2 = { name: "John" };
+
+console.log(obj1 == obj2); // false
+console.log(obj1 === obj2); // false
+
+// Почему? Это разные объекты в памяти!
+
+let obj3 = obj1; // obj3 ссылается на тот же объект
+console.log(obj1 === obj3); // true
+
+// То же с массивами:
+
+let arr1 = [1, 2, 3];
+let arr2 = [1, 2, 3];
+console.log(arr1 === arr2); // false (разные массивы)
